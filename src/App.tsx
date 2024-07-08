@@ -1,7 +1,9 @@
+import Example from './components/Example'
+
 const App = () => {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <Example />
     </div>
   )
 }
