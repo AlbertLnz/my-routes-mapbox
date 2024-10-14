@@ -13,7 +13,7 @@
 
 #infoButton {
   background-image: url('/assets/navigationButtons/mapboxgl-ctrl-attrib.svg');
-  background-color: #25B1FF;
+  background-color: #8fc866;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
@@ -23,8 +23,8 @@
   border-radius: 8px;
 }
 
-#infoButton[data-status="true"] {
-  background-color: greenyellow;
+#infoButton[data-status='true'] {
+  background-color: #ff7f82;
 }
 
 #infoButton:disabled {
@@ -33,7 +33,7 @@
 
 #prevButton {
   background-image: url('/assets/navigationButtons/prevRouteIcon.svg');
-  background-color: #FEAA00;
+  background-color: #9ac8ea;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
@@ -45,7 +45,7 @@
 
 #nextButton {
   background-image: url('/assets/navigationButtons/nextRouteIcon.svg');
-  background-color: #1DAB7F;
+  background-color: #9ac8ea;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75%;
