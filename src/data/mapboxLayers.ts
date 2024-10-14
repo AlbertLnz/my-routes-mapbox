@@ -1,0 +1,16 @@
+export const myAppLayers = [
+  'landcover',
+  'landuse',
+  'national-park',
+  'hillshade',
+  'contour-line',
+  'road-path',
+  'road-path-cycleway-piste',
+  'bridge-path',
+  'wetland',
+  'natural-line-label',
+  'natural-point-label',
+  'poi-label',
+  'settlement-subdivision-label',
+  'water',
+]
