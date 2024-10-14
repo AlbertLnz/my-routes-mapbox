@@ -1,5 +1,11 @@
 import { RoutesCollection } from '../types.d'
 
+const colorsDifficulties = {
+  easy: '#008000',
+  normal: '#FFA500',
+  hard: '#FF0000',
+}
+
 export const routes: RoutesCollection = {
   General: {
     name: 'Vista General',
@@ -16,7 +22,7 @@ export const routes: RoutesCollection = {
     image: 'assets/routesImages/Puigsacalm.webp',
     distance: '8.92 km',
     difficulty: 'Fácil',
-    difficulty_color: 'green',
+    difficulty_color: colorsDifficulties.easy,
     total_time: '3:50 h',
     total_asc: '350 m',
     total_desc: '30 m',
@@ -56,7 +62,7 @@ export const routes: RoutesCollection = {
     image: 'assets/routesImages/TosadAlp.webp',
     distance: '',
     difficulty: 'Normal',
-    difficulty_color: 'orange',
+    difficulty_color: colorsDifficulties.normal,
     total_time: '',
     total_asc: '',
     total_desc: '',
@@ -86,7 +92,7 @@ export const routes: RoutesCollection = {
     image: 'assets/routesImages/PicadEstats.webp',
     distance: '',
     difficulty: 'Difícil',
-    difficulty_color: 'black',
+    difficulty_color: colorsDifficulties.hard,
     total_time: '',
     total_asc: '',
     total_desc: '',
@@ -132,7 +138,7 @@ export const routes: RoutesCollection = {
     image: 'assets/routesImages/Puigmal.webp',
     distance: '',
     difficulty: 'Difícil',
-    difficulty_color: 'black',
+    difficulty_color: colorsDifficulties.hard,
     total_time: '',
     total_asc: '',
     total_desc: '',

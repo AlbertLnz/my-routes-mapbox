@@ -8,19 +8,26 @@ type Props = {
 const InfoCard = ({ routeIndex }: Props) => {
   const entries = Object.entries(routes)
   const [, routeValues] = entries[routeIndex] // routeKey, routeValues
-
+  const bkgColor = routeValues.difficulty_color + '30'
   return (
-    <section id="card">
-      <div id="textContainer">
+    <section id='card'>
+      <div
+        id='textContainer'
+        style={{
+          backgroundColor: bkgColor,
+          borderTopLeftRadius: '20px',
+          borderTopRightRadius: '20px',
+        }}
+      >
+        <h2>{routeValues.name}</h2>
         <div
-          id="point"
+          id='line'
           style={{
             backgroundColor: routeValues.difficulty_color,
           }}
         ></div>
-        <h2>{routeValues.name}</h2>
       </div>
-      <img src={routeValues.image} alt="" />
+      <img src={routeValues.image} alt='' />
 
       <ul>
         <li>
@@ -40,12 +47,12 @@ const InfoCard = ({ routeIndex }: Props) => {
         </li>
       </ul>
 
-      <div id="linksContainer">
-        <a id="garmin" target="_blank" href={routeValues.link_garmin}>
-          <img src="assets/cardImages/garminIcon.webp" alt="" />
+      <div id='linksContainer'>
+        <a id='garmin' target='_blank' href={routeValues.link_garmin}>
+          <img src='assets/cardImages/garminIcon.webp' alt='' />
         </a>
-        <a id="gpx" target="_blank" href={routeValues.gpx}>
-          <img src="assets/cardImages/gpxIcon.webp" alt="" />
+        <a id='gpx' target='_blank' href={routeValues.gpx}>
+          <img src='assets/cardImages/gpxIcon.webp' alt='' />
         </a>
       </div>
     </section>
