@@ -1,30 +1,14 @@
 import { RefObject } from 'react'
 
-// · Estaría bien que funcionase así, pero da un error (circularly references)
-
-// export type RouteKeys = keyof typeof routes // Opción 1 (❌)
-
-// export type RouteKeys = keyof RoutesCollection // Opción 2 (❌)
-
 export type RouteKeys =
   | 'General'
-  | 'PuigsacalmRoute'
-  | 'TosadAlpRoute'
-  | 'PicaEstatsPinetRoute'
-  | 'PuigmalErrRoute' // Opción 3 (🟠): ERRORES AL ASIGNAR UNA RUTA CONCRETA ->  routes[routeName]
-
-// export enum RouteEnum {
-//   General = 'General',
-//   Puigsacalm = 'PuigsacalmRoute',
-//   TosadAlp = 'TosadAlpRoute',
-//   PicaEstatsPinet = 'PicaEstatsPinetRoute',
-//   PuigmalErr = 'PuigmalErrRoute',
-// }
-// // Opción 4 (🟠): Y en el routes.ts, especificar
-// export type RouteKeys = keyof typeof RouteEnum
+  | 'Puigsacalm'
+  | 'TosadAlp'
+  | 'PicaEstatsPinet'
+  | 'PuigmalErr'
 
 export interface RoutesCollection {
-  [routeKey: RouteEnum]: Route
+  [routeKey: RouteKeys]: Route
 }
 
 export interface Route {

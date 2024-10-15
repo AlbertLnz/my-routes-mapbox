@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { routes } from '../data/routes'
 import { useStoreMap } from '../hooks/useStoreMap'
 import '../styles/map.css'
-import { RouteKeys } from '../types.d'
+import { Route, RouteKeys, RoutesCollection } from '../types.d'
 import { animationRoute } from '../utils/animationRoute'
 import { changeRouteIndex } from '../utils/changeRouteIndex'
 import { getRoute } from '../utils/getRoute'
@@ -21,22 +21,24 @@ const Map = () => {
   useEffect(() => {
     setMap({ mapboxAccessToken, mapContainerRef })
     loadMapStyles()
-  }, [])
+  }, [loadMapStyles, setMap])
 
   const handleRequestRoute = (direction: string) => {
     if (state.mapObject) {
-      const routeKeys = Object.keys(routes)
+      const routeKeys = Object.keys(routes) as RouteKeys[]
       const newIndex = changeRouteIndex({
         direction,
         routeIndexSelected,
         setRouteIndexSelected,
       })
 
-      const routeName = routeKeys[newIndex] as RouteKeys
+      const routeName = routeKeys[newIndex]
 
       if (routeName !== 'General') {
-        const routeColor = routes[routeName].difficulty_color
-        const coordinates = routes[routeName].coords as number[][]
+        const route = routes[routeName as keyof RoutesCollection] as Route
+
+        const routeColor = route.difficulty_color as string
+        const coordinates = route.coords as number[][]
 
         getRoute(coordinates, routeName, routeColor, addRoute, state.mapRoutes)
       }
@@ -51,7 +53,7 @@ const Map = () => {
 
   return (
     <>
-      <div id="map" ref={mapContainerRef}></div>
+      <div id='map' ref={mapContainerRef}></div>
       {routeIndexSelected !== 0 && showCardInfo && (
         <InfoCard routeIndex={routeIndexSelected} />
       )}
