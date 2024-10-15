@@ -1,8 +1,8 @@
 import { routes } from '../data/routes'
-import { AnimationRoute } from '../types.d'
+import { AnimationRoute, Route, RoutesCollection } from '../types.d'
 
 export const animationRoute = ({ map, routeName }: AnimationRoute) => {
-  const route = routes[routeName]
+  const route = routes[routeName as keyof RoutesCollection] as Route
 
   map.flyTo({
     center: [route.animation.lng, route.animation.lat],

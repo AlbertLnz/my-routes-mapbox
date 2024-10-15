@@ -1,14 +1,13 @@
-import { RouteKey } from '../data/routes'
-import { RouteRequest } from '../types'
+import { RouteKeys, RouteRequest } from '../types.d'
 
 const mapboxAccessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN!
 
 export const getRoute = async (
   coordinates: number[][],
-  routeName: RouteKey,
+  routeName: RouteKeys,
   routeColor: string,
   addRoute: (request: RouteRequest) => void,
-  mapRoutes: Set<RouteKey>
+  mapRoutes: Set<RouteKeys>
 ) => {
   const coordinatesString = coordinates
     .map((coord) => coord.join(','))

@@ -1,4 +1,5 @@
-import { RouteKey, routes } from '../data/routes'
+import { routes } from '../data/routes'
+import { RouteKeys } from '../types.d'
 
 type Props = {
   direction: string
@@ -11,7 +12,7 @@ export const changeRouteIndex = ({
   routeIndexSelected,
   setRouteIndexSelected,
 }: Props): number => {
-  const routeKeys: RouteKey[] = Object.keys(routes) as RouteKey[]
+  const routeKeys: RouteKeys[] = Object.keys(routes) as RouteKeys[]
 
   let newIndex: number
   if (direction === '+') {
