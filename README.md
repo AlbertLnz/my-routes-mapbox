@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# AlbertLnz tracking routes 🗻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+[![React][React.js]][React-url] [![Mapbox][Mapbox]][Mapbox-url] [![TypeScript][TypeScript]][TypeScript-url]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
 
-## Expanding the ESLint configuration
+[Mapbox]: https://img.shields.io/badge/Mapbox-0E1012?style=for-the-badge&logo=mapbox&logoColor=FFFFFF
+[Mapbox-url]: https://www.mapbox.com/
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+[TypeScript]: https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=FFFFFF
+[TypeScript-url]: https://www.typescriptlang.org/
 
-- Configure the top-level `parserOptions` property like this:
+</div>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### My Route resume
+|     | Route          | Info                                        |
+| :-- | :--------------- | :-------------------------------------------- |
+| ⛰️🟢  | Coll de Bracons - Puigsacalm | Easy / 8.92 km / 3:50 h  |
+| ⛰️🟠  | Tosa d'Alp         | Normal /       |
+| ⛰️🔴  | Pica d'Estats (Pinet)        | Hard /  |
+| ⛰️🔴  | Puigmal (Err)       | Hard /  |
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- *View the 3D routes on my **[website](https://albertlnz-routes.netlify.app)***
+
+## 📖 Install locally
+| ⚙️ Command                                                    | 📓 Action                                   |
+| :----------------------------------------------------------- | :------------------------------------------ |
+| `git clone https://github.com/AlbertLnz/my-routes-mapbox`    | Clone the repository                        |
+| `cd my-routes-mapbox`                                        | Enter to the project                        |
+| `npm install`                                                | Install dependencies                        |
+| `Insert an API KEY of Mapbox`                                | Change `.env.example` file to `.env`        |
+| `npm run dev`                                                | Starts local dev server at `localhost:5173` |
+
+## ☕ Buy me a coffee
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/albertlnz)
