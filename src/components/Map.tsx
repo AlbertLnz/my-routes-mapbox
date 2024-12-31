@@ -6,6 +6,7 @@ import { Route, RouteKeys, RoutesCollection } from '../types.d'
 import { animationRoute } from '../utils/animationRoute'
 import { changeRouteIndex } from '../utils/changeRouteIndex'
 import { getRoute } from '../utils/getRoute'
+import { Alert } from './Alert'
 import InfoCard from './InfoCard'
 import NavigationButtons from './NavigationButtons'
 
@@ -62,6 +63,11 @@ const Map = () => {
         handleShowCardInfo={handleShowCardInfo}
         routeIndexSelected={routeIndexSelected}
       />
+      <Alert seconds={5}>
+        <p>
+          Enable <span>WebGL</span> for proper website functionality 🗺️🌍
+        </p>
+      </Alert>
     </>
   )
 }
