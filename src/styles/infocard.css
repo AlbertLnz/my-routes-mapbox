@@ -6,88 +6,89 @@
 
 #card {
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 20% 30% 35% 15%;
   z-index: 10;
-  background-color: #f1f2f5;
+  background-color: #f7f7f7;
   color: #23272f;
   top: 20px;
   left: 20px;
   width: 25%;
   height: 85%;
   border-radius: 20px;
-  padding-bottom: 20px 0;
   font-size: large;
 }
 
 #textContainer {
-  padding-top: 20px;
+  flex-grow: 1;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100%;
+  padding: 0 20px;
+  line-clamp: 2;
+
+  & #line {
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    margin-top: 10px;
+    opacity: 0.5;
+  }
 }
 
-#line {
-  display: absolute;
-  height: 10px;
-  width: 100%;
-  margin-top: 10px;
-  opacity: 0.5;
-}
-
-#card > img {
-  width: 60%;
+#imgContainer {
+  overflow: hidden;
   display: flex;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  border-radius: 6px;
+  justify-content: center;
+  padding: 5px 0;
+
+  & img {
+    height: -webkit-fill-available;
+    border-radius: 6px;
+  }
 }
 
-#card > ul {
-  list-style: none;
-  margin: 0 20px;
-  margin-bottom: 25px;
+#infoContainer {
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  gap: 10px;
-}
+  justify-content: center;
+  align-items: center;
 
-strong {
-  font-size: larger;
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+  }
+  & strong {
+    font-size: larger;
+  }
 }
 
 #linksContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 50px;
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
 
-#garmin,
-#gpx {
-  background-color: #ffffff;
-  padding: 5px;
-  border-radius: 10px;
-  border: 1px solid #000;
-}
+  & a {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #000;
 
-#garmin:hover,
-#gpx:hover {
-  background-color: #ebecf0;
-}
+    & img {
+      width: 40px;
+    }
 
-#garmin > img {
-  width: 40px;
-}
-
-#gpx > img {
-  width: 40px;
+    &:hover {
+      background-color: #ebecf0;
+    }
+  }
 }
 
 /* Mobile */

@@ -156,8 +156,8 @@ export const routes: RoutesCollection = {
     difficulty: 'Difícil',
     difficulty_color: colorsDifficulties.hard,
     total_time: '4:10 h',
-    total_asc: '920m',
-    total_desc: '920m',
+    total_asc: '920 m',
+    total_desc: '920 m',
     link_garmin: '',
     gpx: 'assets/routesGPX/PuigmalDesdeErr.gpx',
     animation: {
